@@ -225,7 +225,7 @@ class LocalTTSEngine(
         val url = "${config.normalizedUrl}/v1/audio/speech"
         val jsonPayload = buildJsonObject {
             put("input", text)
-            put("model", "chatterbox-persian")
+            put("model", "kokoro")
             put("voice", config.voice)
             put("speed", speed)
             put("response_format", "wav")
