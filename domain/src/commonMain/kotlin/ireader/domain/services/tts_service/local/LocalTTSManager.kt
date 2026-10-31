@@ -107,7 +107,7 @@ class LocalTTSManager(
         val key = apiKey ?: _config.value.apiKey
 
         return try {
-            val endpoint = "$targetUrl/api/voices"
+            val endpoint = "$targetUrl/v1/audio/voices"
             val response = httpClient.get(endpoint) {
                 accept(ContentType.Application.Json)
                 key?.takeIf { it.isNotBlank() }?.let {
